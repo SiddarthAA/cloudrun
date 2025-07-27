@@ -12,4 +12,4 @@ requests
 geocoder
 google-cloud-firestore
 google-cloud-storage
-google-pubsub
+google-cloud-pubsub
