@@ -1,0 +1,7 @@
+firebase-admin
+dotenv
+google-generativeai
+fastapi
+numpy
+google-cloud-aiplatform
+vertexai
