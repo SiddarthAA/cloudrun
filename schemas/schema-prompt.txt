@@ -6,7 +6,7 @@ You are given unstructured raw news or social media content. Your task is to str
 3. Keep all field types and formats exactly as defined (e.g., `ISO datetime` for dates, `float` for scores).
 4. Ensure all keys in the schema are always present, even if values are null.
 5. For `sentiment`, provide a number between -1.0 (negative) and +1.0 (positive), or 0.0 if neutral.
-6. For `tags`, select up to 3 most relevant tags from the following list: `Traffic`, `Weather`, `Infrastructure`, `Events`, `Emergency`, `Health`, `Education`, `Transport`, `Power`, `Other`. If fewer than 3 are relevant, select fewer. For `entities`, populate from content keywords (limit to 3 MAX).
+6. For `prefrences`, select up to 3 most relevant tags from the following list: `Traffic`, `Weather`, `Infrastructure`, `Events`, `Emergency`, `Health`, `Education`, `Transport`, `Power`, `Other`. If fewer than 3 are relevant, select fewer. For `entities`, populate from content keywords (limit to 3 MAX).
 7. For `priority_status`, determine if the event is 'high', 'medium', or 'low' based on its urgency, impact, and significance as described in the raw content.
 8. Make the `title` and `description` concise and to the point, summarizing the core information effectively.
 9. For `engagement.radio_jockey`, set to `true` if the news is good or important enough to be featured by a radio jockey; otherwise, set to `false`.
@@ -42,7 +42,6 @@ You are given unstructured raw news or social media content. Your task is to str
   "analysis": {
     "sentiment": -1.0,
     "preferences": ["string"],
-    "entities": ["string"],
     "priority_status": "high|medium|low"
   },
 
