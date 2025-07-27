@@ -7,4 +7,4 @@ set -e
 PORT=${PORT:-8080}
 
 # Run the uvicorn server
-exec uvicorn main:app --host 0.0.0.0 --port "$PORT" 
+exec uvicorn pipeline:app --host 0.0.0.0 --port "$PORT" 
