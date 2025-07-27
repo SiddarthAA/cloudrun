@@ -19,7 +19,7 @@ try:
 except Exception as e:
     pass 
 
-@app.post("/aiworkflow_subscriber")
+@app.post("/aiworkflow_subscriber",status_code=200)
 async def aiworkflow_subscriber(request: Request):
     envelope = await request.json()
     
@@ -33,7 +33,7 @@ async def aiworkflow_subscriber(request: Request):
     publish_time = message.get("publishTime")
 
     if data:
-        decoded_data = json.loads(base64.b64decode(data).decode("utf-8"))
+        decoded_data = json.loads(data)
         batch = []
         for news in decoded_data:
             raw = str(news)
